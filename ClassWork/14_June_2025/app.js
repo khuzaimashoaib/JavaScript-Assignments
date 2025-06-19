@@ -53,32 +53,40 @@
 
 // Q-6
 
-// var text = "Khuzaima";
-// var letter = prompt("Enter a letter to count:");
+// var letter = prompt("Enter a String:");
+// var text = "a";
 // var count = 0;
 
-// for (var i = 0; i < text.length; i++) {
-//   if (text[i] === letter) {
+// for (var i = 0; i < letter.length; i++) {
+//   if (letter[i] === text) {
 //     count++;
 //   }
 // }
 
-// // console.log("The letter '" + letter + "' appears " + count + " times.");
-// document.writeln("The letter '" + letter + "' appears " + count + " times.");
+// console.log("The letter '" + letter + "' appears " + count + " times.");
+// document.writeln("The letter '" + text + "' appears " + count + " times.");
 
 // Q-7
 
 // var nameArr = [];
 
+// // for (var i = 0; i < 5; i++) {
+// //   var userName = prompt(`Enter Name ${i + 1}:`);
+// //   nameArr.push(userName);
+// // }
+// // nameArr.sort();
+
+// // for (var i = 0; i < nameArr.length; i++) {
+// //   console.log(nameArr[i]);
+// // }
+
+// // 2nd Method
+
 // for (var i = 0; i < 5; i++) {
-//   var userName = prompt(`Enter Name ${i + 1}:`);
-//   nameArr.push(userName);
+//   nameArr[i] = prompt(`Enter Name ${i + 1}:`);
 // }
 // nameArr.sort();
-
-// for (var i = 0; i< nameArr.length; i++) {
-//   console.log(nameArr[i]);
-// }
+// console.log(nameArr);
 
 // Q-8
 
@@ -91,7 +99,17 @@
 // Q-9
 
 // var sentence = prompt("Enter a sentence:");
+// var ch = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 // var count = 0;
+
+// for (var i = 0; i < sentence.length; i++) {
+//   for (var j = 0; j < ch.length; j++) {
+//     if (ch[j] === sentence[i]) {
+//       count++;
+//     }
+//   }
+// }
+// 2nd Method
 
 // for (var i = 0; i < sentence.length; i++) {
 //   var ch = sentence[i];
@@ -142,12 +160,28 @@
 //   alert(palindrome + " is not a palindrome");
 // }
 
-// Q-13 ?
+// Q-13 
+
+// var number = +prompt("Enter a number: ");
+// var count = false;
+// for (var i = 2; i < number; i++) {
+//   var remainder = number % i;
+//   console.log(remainder);
+
+//   if (remainder === 0) {
+//     count = true;
+//     break;
+//   }
+// }
+// if (!count) {
+//   console.log(number + " is a prime number");
+// } else {
+//   console.log(number + " is not a prime number");
+// }
 
 // Q-14
 
 // var numbers = [105,16,24,32,40,56,64,72,80,98];
-
 
 // var max = numbers[0];
 // for (var i = 0; i < numbers.length; i++) {
@@ -183,9 +217,7 @@
 
 // alert("Result: " + result);
 
-
 // Q-16
-
 
 // var numbers = [12, 75, 43, 89, 21, 55, 67, 30];
 // var greaterThan50 = [];
@@ -197,4 +229,3 @@
 // }
 
 // console.log("Numbers greater than 50:", greaterThan50);
-
