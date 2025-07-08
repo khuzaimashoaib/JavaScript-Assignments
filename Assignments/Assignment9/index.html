@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h1>Assignment 9</h1> -->
+    <div class="main">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
+        alt="Lock Icon"
+        height="80px" class="lock_icon"
+      />
+      <h1>Random Password Generator</h1>
+      <p>
+        Create strong and secure passwords to keep your account safe online.
+      </p>
+
+      <div class="card">
+        <div class="card-content">
+          <img
+            src="https://www.avast.com/content/dam/avast/illustrations/Password-Generator-5.svg"
+            alt=""
+          />
+        </div>
+        <div class="card-form">
+          <div class="form-group">
+            <div class="form-group password-output">
+              <input
+                type="text"
+                id="passwordOutput"
+                placeholder="Your password"
+                readonly
+              />
+              <span class="icon" id="refreshBtn" title="Refresh">🔄</span>
+              <span class="icon" id="copyBtn" title="Copy">📋</span>
+            </div>
+
+            <label for="length"
+              >Password Length
+              <span class="range-value" id="lengthValue">12</span>
+            </label>
+            <input
+              type="range"
+              id="length"
+              min="6"
+              max="50"
+              value="12"
+              oninput="document.getElementById('lengthValue').innerText = this.value"
+            />
+          </div>
+          <div class="checkbox_main">
+
+              
+              <div class="form-group checkbox-group">
+            <label
+              ><input type="checkbox" id="uppercase" checked /> 
+              Uppercase</label
+            >
+            <label
+            ><input type="checkbox" id="lowercase" checked /> 
+            Lowercase</label
+            >
+            
+        </div>
+          <div class="form-group checkbox-group">
+            
+            <label
+              ><input type="checkbox" id="numbers" checked /> 
+              Numbers</label
+            >
+            <label
+              ><input type="checkbox" id="special" checked />  Symbols
+              </label
+              >
+            </div>
+        </div>
+
+          <button class="generate-btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
