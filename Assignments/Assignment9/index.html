@@ -36,8 +36,20 @@
                 placeholder="Your password"
                 readonly
               />
-              <span class="icon" id="refreshBtn" title="Refresh" onclick="generatePassword()">🔄</span>
-              <span class="icon" id="copyBtn" title="Copy" onclick="copyPassword()">📋</span>
+              <span
+                class="icon"
+                id="refreshBtn"
+                title="Refresh"
+                onclick="generatePassword()"
+                >🔄</span
+              >
+              <span
+                class="icon"
+                id="copyBtn"
+                title="Copy"
+                onclick="copyPassword()"
+                >📋</span
+              >
             </div>
 
             <label for="length"
@@ -47,7 +59,7 @@
             <input
               type="range"
               id="length"
-              min="6"
+              min="1"
               max="50"
               value="12"
               oninput="document.getElementById('lengthValue').innerText = this.value"
@@ -59,22 +71,19 @@
                 ><input type="checkbox" id="uppercase" checked />
                 Uppercase</label
               >
-              <label
-                ><input type="checkbox" id="lowercase" checked />
-                Lowercase</label
-              >
+              <label><input type="checkbox" id="lowercase" checked/> Lowercase</label>
             </div>
             <div class="form-group checkbox-group">
-              <label
-                ><input type="checkbox" id="numbers" checked /> Numbers</label
-              >
-              <label
-                ><input type="checkbox" id="special" checked /> Symbols
-              </label>
+              <label><input type="checkbox" id="numbers" /> Numbers</label>
+              <label><input type="checkbox" id="special" /> Symbols </label>
             </div>
+
+            <div id="pass_strength"></div>
           </div>
 
-          <button class="generate-btn" onclick="generatePassword()">Generate Password</button>
+          <button class="generate-btn" onclick="generatePassword()">
+            Generate Password
+          </button>
         </div>
       </div>
     </div>
